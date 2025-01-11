@@ -1,0 +1,294 @@
+:root{
+	--primary : #00ff40;
+	--bg: #191970;
+}
+
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+
+body{
+		font-family: 'Poppins',sans-serif;
+		background-color: #fff; 
+		color: black;
+		min-height: 2000px;
+}
+
+/* About Secsion */
+.about {
+	padding: 7rem 7% 1.4rem;
+}
+.about h2{
+	text-align: center;
+	color: #fff;
+	font-size: 2.6rem;
+	margin-bottom: 3rem;
+}
+.about h2 span{
+	color: black;
+}
+.about .row{
+	display: flex;
+}
+.row .about-img{
+	flex: 1 1 45rem;
+}
+.row .about-img img{
+	width: 100%;
+}
+.row .content{
+	flex: 1 1 35rem;
+	padding:0 1rem;
+}
+.row .content h3{
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+}
+.row .content p{
+	margin-bottom: 0.8rem;
+	font-size: 1.4rem;
+	line-height: 1.6
+}
+.row .content p span{
+	color: #fff;
+}
+
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 5%;
+	background-color: rgba(1, 1, 1, 0.8);
+	border-bottom: 2px solid var(--primary);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	line-height: 1;
+}
+
+ .navbar-logo{
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--primary);
+	font-style: italic;
+}
+ .navbar-logo span{
+ 	color: white;
+}
+
+.navbar-nav a{
+	color: var(--primary);
+	display: inline-block;
+	font-size: 1.3rem;
+	margin: 0 1rem;
+
+}
+
+.navbar-nav a:hover{
+	color: white;
+}
+.navbar-nav a::after{
+	content: '';
+	display: block;
+	padding-bottom: 0.5rem;
+	border-bottom: 0.1rem solid var(--primary);
+	transform: scaleX(0);
+	transition: 0.5s linear;
+}
+.navbar-nav a:hover::after{
+	transform: scaleX(0.5);
+}
+.navbar-extra a{
+	color: var(--primary);
+	margin: 0 0.5rem;
+}
+.navbar-extra a:hover{
+	color: #fff;
+}
+
+#menu{
+	display: none;
+}
+
+/* About Secsion */
+.about {
+	padding: 7rem 7% 1.4rem;
+}
+.about h2{
+	text-align: center;
+	color: #fff;
+	font-size: 2.6rem;
+	margin-bottom: 3rem;
+}
+.about h2 span{
+	color: black;
+}
+.about .row{
+	display: flex;
+}
+.row .about-img{
+	flex: 1 1 45rem;
+}
+.row .about-img img{
+	width: 100%;
+}
+.row .content{
+	flex: 1 1 35rem;
+	padding:0 1rem;
+}
+.row .content h3{
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+}
+.row .content p{
+	margin-bottom: 0.8rem;
+	font-size: 1.4rem;
+	line-height: 1.6
+}
+.row .content p span{
+	color: #fff;
+}
+
+/* Media Queries */
+
+
+/* laptop */
+@media (min-width:1024px) and (max-width: 1439px) {
+	html{
+		font-size: 75%;
+	}
+}
+
+
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1023px){
+	html{
+		font-size: 62.5%;
+	}
+
+	#menu{
+		display: inline-block;
+	}
+
+	.navbar-nav{
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		background: rgba(1, 1, 1, 0.8);
+		width: 20rem;
+		height: 100vh;
+		transition: 1s;
+	}
+
+	.navbar-nav.active{
+		right: 0;
+	}
+
+	.navbar-nav a{
+		color: var(--primary);
+		display: block;
+		margin: 1.5rem;
+		padding: 0.5rem;
+		font-size: 2rem;
+	}
+	.navbar-nav a::after {
+		transform-origin: 0 0;
+	}
+	.navbar-nav a:hover::after {
+		transform: scaleX(0.4);
+	}
+
+
+	.about .row{
+		flex-wrap: wrap;
+
+	}
+	.about .row .about-img img{
+		height: 24rem;
+		object-fit: cover;
+		object-position: top;
+	}
+
+	.about .row .content{
+		padding: 0;
+	}
+
+	.about .row .content h3{
+		margin-top: 1rem;
+		font-size: 2rem;
+	}
+
+	.about .row .content p{
+		font-size: 1.6rem;
+	}
+}
+
+
+/*Moblie phone*/
+@media (min-width: 320px) and (max-width: 767px){
+	html{
+		font-size: 50%;
+	}
+		#menu{
+		display: inline-block;
+	}
+	
+	.navbar-nav{
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		background: rgba(1, 1, 1, 0.8);
+		width: 20rem;
+		height: 100vh;
+		transition: 1s;
+	}
+
+	.navbar-nav.active{
+		right: 0;
+	}
+
+	.navbar-nav a{
+		color: var(--primary);
+		display: block;
+		margin: 1.5rem;
+		padding: 0.5rem;
+		font-size: 2rem;
+	}
+	.navbar-nav a::after {
+		transform-origin: 0 0;
+	}
+	.navbar-nav a:hover::after {
+		transform: scaleX(0.4);
+	}
+
+
+	.about .row{
+		flex-wrap: wrap;
+
+	}
+	.about .row .about-img img{
+		height: 24rem;
+		object-fit: cover;
+		object-position: top;
+	}
+
+	.about .row .content{
+		padding: 0;
+	}
+
+	.about .row .content h3{
+		margin-top: 1rem;
+		font-size: 2rem;
+	}
+
+	.about .row .content p{
+		font-size: 1.6rem;
+	}
+}
